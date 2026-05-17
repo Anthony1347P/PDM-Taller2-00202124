@@ -30,6 +30,7 @@ fun BusquedaScreen(
 ) {
     val query by viewModel.query.collectAsStateWithLifecycle()
     val resultados by viewModel.resultados.collectAsStateWithLifecycle()
+    val historial by viewModel.historial.collectAsStateWithLifecycle()
 
     Scaffold(
         topBar = {
@@ -64,6 +65,39 @@ fun BusquedaScreen(
             )
 
             when {
+                query.isBlank() && historial.isNotEmpty() -> {
+                    Text(
+                        text = "Busquedas recientes",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(bottom = 8.dp)
+                    )
+                    LazyColumn(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        items(historial) { item ->
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { viewModel.usarQueryDelHistorial(item) }
+                                    .padding(vertical = 10.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Default.Search,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.size(18.dp)
+                                )
+                                Spacer(Modifier.width(12.dp))
+                                Text(
+                                    text = item,
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                            }
+                            HorizontalDivider(thickness = 0.5.dp)
+                        }
+                    }
+                }
+
                 query.isBlank() -> {
                     Box(
                         modifier = Modifier.fillMaxSize(),
@@ -95,14 +129,15 @@ fun BusquedaScreen(
                         style = MaterialTheme.typography.bodySmall,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
-                    LazyColumn(
-                        verticalArrangement = Arrangement.spacedBy(12.dp)
-                    ) {
+                    LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                         items(resultados) { restaurante ->
                             Card(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .clickable { onRestauranteClick(restaurante.id) },
+                                    .clickable {
+                                        viewModel.guardarEnHistorial(query)
+                                        onRestauranteClick(restaurante.id)
+                                    },
                                 shape = RoundedCornerShape(12.dp)
                             ) {
                                 Row(
