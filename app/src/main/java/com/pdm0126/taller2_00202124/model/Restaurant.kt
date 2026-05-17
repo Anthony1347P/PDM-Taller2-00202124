@@ -1,6 +1,5 @@
 package com.pdm0126.taller2_00202124.model
 
-// Modelo de un restaurante con sus categorias y menu
 data class Restaurant(
     val id: Int,
     val name: String,

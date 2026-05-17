@@ -4,13 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.pdm0126.taller2_00202124.navigation.NavegacionPrincipal
 import com.pdm0126.taller2_00202124.ui.theme.Taller2_00202124Theme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +13,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Taller2_00202124Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                NavegacionPrincipal()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Taller2_00202124Theme {
-        Greeting("Android")
     }
 }
