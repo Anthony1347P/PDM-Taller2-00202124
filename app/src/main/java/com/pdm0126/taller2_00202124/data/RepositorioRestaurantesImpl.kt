@@ -116,7 +116,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
                     id = 403,
                     name = "Lasana (pollo/carne)",
                     description = "Lasagna casera con pollo o carne molida, salsa de tomate y mucho queso - \$3.25",
-                    imageUrl = "https://images.unsplash.com/photo-1619895092538-128f4d2ad6c5?w=400&q=80"
+                    imageUrl = "https://images.unsplash.com/photo-1611270629569-8b357cb88da9?w=400&q=80"
                 ),
                 Dish(
                     id = 404,

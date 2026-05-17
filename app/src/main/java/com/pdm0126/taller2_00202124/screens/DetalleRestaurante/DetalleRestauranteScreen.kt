@@ -22,10 +22,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import coil3.compose.AsyncImage
+import com.pdm0126.taller2_00202124.screens.Carrito.CartViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DetalleRestauranteScreen(
+    cartViewModel: CartViewModel,
     restauranteId: Int,
     onVolver: () -> Unit
 ) {
@@ -92,6 +94,7 @@ fun DetalleRestauranteScreen(
                                 Spacer(Modifier.height(6.dp))
                                 Button(
                                     onClick = {
+                                        cartViewModel.agregar(platillo, r.name)
                                         Toast.makeText(
                                             contexto,
                                             "${platillo.name} agregado al carrito",

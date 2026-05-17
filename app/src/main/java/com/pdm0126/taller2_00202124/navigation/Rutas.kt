@@ -12,4 +12,7 @@ sealed class Ruta : NavKey {
 
     @Serializable
     data object Busqueda : Ruta()
+
+    @Serializable
+    data object Carrito : Ruta()
 }

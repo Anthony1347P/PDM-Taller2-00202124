@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -21,15 +22,19 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil3.compose.AsyncImage
 import com.pdm0126.taller2_00202124.model.Restaurant
+import com.pdm0126.taller2_00202124.screens.Carrito.CartViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ListaRestaurantesScreen(
+    cartViewModel: CartViewModel,
     onRestauranteClick: (Int) -> Unit,
     onBusquedaClick: () -> Unit,
+    onCarritoClick: () -> Unit,
     viewModel: ListaRestaurantesViewModel = viewModel()
 ) {
     val porCategoria by viewModel.porCategoria.collectAsStateWithLifecycle()
+    val cantidadCarrito by cartViewModel.cantidadTotal.collectAsStateWithLifecycle()
 
     Scaffold(
         topBar = {
@@ -41,6 +46,20 @@ fun ListaRestaurantesScreen(
                             imageVector = Icons.Default.Search,
                             contentDescription = "Buscar"
                         )
+                    }
+                    IconButton(onClick = onCarritoClick) {
+                        BadgedBox(
+                            badge = {
+                                if (cantidadCarrito > 0) {
+                                    Badge { Text("$cantidadCarrito") }
+                                }
+                            }
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.ShoppingCart,
+                                contentDescription = "Carrito"
+                            )
+                        }
                     }
                 }
             )
