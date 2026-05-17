@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
+import com.pdm0126.taller2_00202124.screens.DetalleRestaurante.DetalleRestauranteScreen
 import com.pdm0126.taller2_00202124.screens.ListaRestaurantes.ListaRestaurantesScreen
 
 @Composable
@@ -25,7 +26,13 @@ fun NavegacionPrincipal() {
                 )
             }
 
-            // Falta:: DetalleRestaurante Y Busqueda>
+
+            entry<Ruta.DetalleRestaurante> { ruta ->
+                DetalleRestauranteScreen(
+                    restauranteId = ruta.restauranteId,
+                    onVolver = { backStack.removeLastOrNull() }
+                )
+            }
         }
     )
 }

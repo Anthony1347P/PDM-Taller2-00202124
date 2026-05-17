@@ -10,7 +10,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 1,
             name = "El Rinconsito UCA",
             description = "El clasico de la UCA con hamburguesas, burritos y tortas, comida mexicana",
-            imageUrl = "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80",
+            imageUrl = "https://images.unsplash.com/photo-1656956175736-5b4e303755b4?w=600&q=80",
             categories = listOf("Comida Mexicana", "Hamburguesas"),
             menu = listOf(
                 Dish(
@@ -43,26 +43,26 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 2,
             name = "Tortas La China 2006",
             description = "Solo tortas, pero las mejores tortas mexicanas que vas a probar",
-            imageUrl = "https://images.unsplash.com/photo-1625167171750-419e95f877d8?w=600&q=80",
+            imageUrl = "https://images.unsplash.com/photo-1668854815550-dbad8b0563bb?w=400&q=80",
             categories = listOf("Comida Mexicana"),
             menu = listOf(
                 Dish(
                     id = 201,
                     name = "Torta Normal",
                     description = "Torta clasica con una porcion de carne, lechuga preparada, queso derretido cebolla aguacate, aderezos y chile - \$2.00",
-                    imageUrl = "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&q=80"
+                    imageUrl = "https://images.unsplash.com/photo-1702119614788-bae35a7be313?w=400&q=80"
                 ),
                 Dish(
                     id = 202,
                     name = "Torta Doble Carne",
                     description = "Doble porcion de carne con lechuga preparada, queso derretido cebolla aguacate, aderezos y chile - \$2.50",
-                    imageUrl = "https://images.unsplash.com/photo-1469648034646-7911874fe62b?w=400&q=80"
+                    imageUrl = "https://images.unsplash.com/photo-1702119614788-bae35a7be313?w=400&q=80"
                 ),
                 Dish(
                     id = 203,
                     name = "Torta Triple Carne",
                     description = "Triple porcion de carne con lechuga preparada, queso derretido cebolla aguacate, aderezos y chile - \$3.50",
-                    imageUrl = "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&q=80"
+                    imageUrl = "https://images.unsplash.com/photo-1702119614788-bae35a7be313?w=400&q=80"
                 )
             )
         ),
@@ -97,7 +97,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 4,
             name = "Comedor La Pea",
             description = "Almuerzos caseros salvadorenos con sabor de hogar a un precio justo",
-            imageUrl = "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=80",
+            imageUrl = "https://images.unsplash.com/photo-1731603147854-26637afafdea?w=600&q=80",
             categories = listOf("Comida Salvadorena"),
             menu = listOf(
                 Dish(
@@ -163,7 +163,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 6,
             name = "Papa John's",
             description = "Mejores ingredientes, mejor pizza. La promesa de Papa John's en cada bocado",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Papa_John%27s_Logo_2019.svg/600px-Papa_John%27s_Logo_2019.svg.png",
+            imageUrl = "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80",
             categories = listOf("Pizza"),
             menu = listOf(
                 Dish(
@@ -190,7 +190,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 7,
             name = "Burger King",
             description = "Hamburguesas flameadas a la parrilla. Como tu las quieras",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Burger_King_2020.svg/600px-Burger_King_2020.svg.png",
+            imageUrl = "https://images.unsplash.com/photo-1715616861229-d0696df846fa?w=600&q=80",
             categories = listOf("Hamburguesas"),
             menu = listOf(
                 Dish(
@@ -217,7 +217,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 8,
             name = "Pizza Hut",
             description = "La pizza original con masa esponjosa y queso derretido como debe ser",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Pizza_Hut_classic_logo.svg/600px-Pizza_Hut_classic_logo.svg.png",
+            imageUrl = "https://images.unsplash.com/photo-1584190926897-0023f6aa05f9?w=600&q=80",
             categories = listOf("Pizza"),
             menu = listOf(
                 Dish(
@@ -244,7 +244,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 9,
             name = "Pollo Campero",
             description = "El sabor del pollo salvadoreno reconocido a nivel mundial",
-            imageUrl = "https://commons.wikimedia.org/wiki/Special:FilePath/Pollo_Campero_San_Salvador_ca_FENADESAL_2012.JPG",
+            imageUrl = "https://images.unsplash.com/photo-1580217593608-61931cefc821?w=600&q=80",
             categories = listOf("Pollo"),
             menu = listOf(
                 Dish(
@@ -271,7 +271,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 10,
             name = "Wendy's",
             description = "Carne fresca, nunca congelada. Calidad Wendy's en cada hamburguesa",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Wendy%27s_logo_2012.svg/600px-Wendy%27s_logo_2012.svg.png",
+            imageUrl = "https://images.unsplash.com/photo-1683855539569-9c4566a5cbe5?w=600&q=80",
             categories = listOf("Hamburguesas"),
             menu = listOf(
                 Dish(
@@ -298,7 +298,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 11,
             name = "McDonald's",
             description = "Me encanta. La cadena de comida rapida mas grande del mundo",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McDonald%27s_logo.svg/600px-McDonald%27s_logo.svg.png",
+            imageUrl = "https://images.unsplash.com/photo-1606720335177-3d04e70fb13b?w=600&q=80",
             categories = listOf("Hamburguesas"),
             menu = listOf(
                 Dish(
@@ -325,7 +325,7 @@ class RepositorioRestaurantesImpl : RepositorioRestaurantes {
             id = 12,
             name = "KFC",
             description = "El pollo frito original con la receta secreta de 11 hierbas y especias",
-            imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/KFC_Logo.svg/600px-KFC_Logo.svg.png",
+            imageUrl = "https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?w=600&q=80",
             categories = listOf("Pollo"),
             menu = listOf(
                 Dish(
